@@ -8,3 +8,14 @@ C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\
 C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSBHopital.csproj.GenerateResource.Cache
 C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.exe
 C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.pdb
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.exe.config
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.exe
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.pdb
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.exe
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.pdb
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSBHopital.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSBHopital.FillOrCancel.resources
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSBHopital.Menu.resources
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSBHopital.NewCustomer.resources
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSBHopital.Properties.Resources.resources
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_GestionEchantillion\obj\Debug\GSBHopital.csproj.GenerateResource.Cache
