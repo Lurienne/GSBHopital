@@ -1,0 +1,127 @@
+-- Creation des tables
+CREATE TABLE Customer(
+CustomerID INT IDENTITY(1,1) NOT NULL,
+CustomerName NVARCHAR(40) NOT NULL,
+YTDOrders INT NOT NULL,
+YTDSales INT NOT NULL
+);
+
+CREATE TABLE Orders(
+CustomerID INT NOT NULL,
+OrderID INT IDENTITY(1,1) NOT NULL,
+OrderDate DATETIME NOT NULL,
+FilledDate DATETIME NULL,
+Status CHAR(1) NOT NULL,
+Amount INT NOT NULL
+);
+
+-- cles primaires
+ALTER TABLE Customer
+add constraint PK_Customer PRIMARY KEY(CustomerID);
+ALTER TABLE Orders
+ADD CONSTRAINT PK_Orders PRIMARY KEY(OrderID);
+
+-- Valeurs par defaut
+ALTER TABLE Customer
+ADD CONSTRAINT Def_Customer_YTDOrders DEFAULT 0 FOR YTDOrders;
+ALTER TABLE Customer
+ADD CONSTRAINT Def_Customer_YTDSales DEFAULT 0 FOR YTDSales;
+ALTER TABLE Orders
+
+-- cles étranfères
+ADD CONSTRAINT FK_Orders_Customer FOREIGN KEY (CustomerID) 
+REFERENCES Customer(CustomerID)
+
+-- PROCEDURE STOCKEE
+CREATE PROCEDURE uspCancelOrder
+@OrderID INT
+AS
+BEGIN
+DECLARE @Delta INT, @CustomerID INT
+
+BEGIN TRANSACTION
+SELECT @Delta = Amount, @CustomerID = CustomerID
+FROM Orders WHERE OrderID = @OrderID;
+
+UPDATE Orders
+SET Status = 'X'
+WHERE OrderID = @OrderID;
+
+UPDATE Customer
+SET
+YTDOrders = YTDOrders = @Delta
+WHERE CustomerID = @CustomerID
+COMMIT TRANSACTION
+END
+
+-- PROCEDURE STOCKEE
+CREATE PROCEDURE uspFillOrder
+@OrderID INT, @FilledDate DATE
+AS
+BEGIN
+DECLARE @Delta INT, @CustomerID INT
+BEGIN TRANSACTION
+SELECT @Delta = Amount, @CustomerID = CustomerID
+FROM Orders WHERE OrderID = @OrderID;
+
+UPDATE Orders
+SET Status = 'F',
+FilledDate = @FilledDate
+WHERE OrderID = @OrderID;
+
+UPDATE Customer
+SET YTDSales = YTDSales + @Delta
+WHERE CustomerID = @CustomerID
+COMMIT TRANSACTION
+END
+
+-- PROCEDURE STOCKEE
+CREATE PROCEDURE upsNewCustomer
+@CustomerName NVARCHAR(40),
+@CustomerID INT OUTPUT
+AS
+BEGIN
+INSERT INTO Customer(CustomerName) VALUES (@CustomerName);
+SET @CustomerID = SCOPE_IDENTITY().
+RETURN @@ERROR
+END
+
+-- PROCEDURE STOCKEE
+CREATE PROCEDURE uspPlaceNewOrder
+@CustomerID INT, @Amount INT, @OrderDate DATE, @Status CHAR(1) = 'O'
+AS
+BEGIN
+DECLARE @RC INT
+BEGIN TRANSACTION
+INSERT INTO Orders (CustomerID, OrderDate, FilledDate, Status, Amount)
+VALUES(@CustomerID, @OrderDate, NULL, @Status, @Amount)
+SELECT @RC = SCOPE_IDENTITY();
+UPDATE Customer
+SET
+YTDOrders = YTDOrders + @Amount
+WHERE CustomerID = @CustomerID
+COMMIT TRANSACTION
+RETURN @RC
+END
+
+-- PROCEDURE STOCKEE
+CREATE PROCEDURE uspShowOrderDetails
+@CustomerID INT = 0
+AS
+BEGIN
+SELECT C.CustomerName, O.OrderDate, O.FilledDate, O.Status, O.Amount
+FROM Customer C
+INNER JOIN Orders O
+On O.CustomerID = C.CustomerID
+WHERE C.CustomerID = @CustomerID
+END
+
+-- TESTER LA PROCEDURE STOCKEE uspNewCustomer
+DECLARE @ID1 INT;
+exec uspNewCustomer 'Hopital St Jacques', @CustomerID = @ID1 OUTPUT;
+SELECT @ID1;
+
+-- TESTER LA PROCEDURE STOCKEE uspNewOrder
+DECLARE @ID2 INT;
+exec @ID2 = uspPlaceNewOrder 2, 300, '04/11/2014'
+SELECT @ID2;
