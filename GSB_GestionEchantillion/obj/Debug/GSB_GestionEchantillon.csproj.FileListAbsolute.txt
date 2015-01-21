@@ -1,0 +1,22 @@
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.csprojResolveAssemblyReference.cache
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.FillOrCancel.resources
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.Navigation.resources
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.NewCustomer.resources
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.Properties.Resources.resources
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.csproj.GenerateResource.Cache
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.exe.config
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.exe
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.pdb
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.exe
+F:\GSB_GestionEchantillion\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.exe.config
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.exe
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.exe
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\bin\Debug\GSB_GestionEchantillon.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.FillOrCancel.resources
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.NewCustomer.resources
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.Properties.Resources.resources
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.csproj.GenerateResource.Cache
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\ConsoleApplication3\GSB_GestionEchantillion\obj\Debug\GSB_GestionEchantillon.Menu.resources
