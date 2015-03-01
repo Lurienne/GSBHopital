@@ -1,0 +1,14 @@
+C:\Users\Tsu\Documents\Visual Studio 2012\Projects\GSB_ClassLibrary\GSB_Tests\bin\Debug\GSB_Tests.dll
+C:\Users\Tsu\Documents\Visual Studio 2012\Projects\GSB_ClassLibrary\GSB_Tests\bin\Debug\GSB_Tests.pdb
+C:\Users\Tsu\Documents\Visual Studio 2012\Projects\GSB_ClassLibrary\GSB_Tests\bin\Debug\GSB_ClassLibrary.dll
+C:\Users\Tsu\Documents\Visual Studio 2012\Projects\GSB_ClassLibrary\GSB_Tests\bin\Debug\GSB_ClassLibrary.pdb
+C:\Users\Tsu\Documents\Visual Studio 2012\Projects\GSB_ClassLibrary\GSB_Tests\obj\Debug\GSB_Tests.csprojResolveAssemblyReference.cache
+C:\Users\Tsu\Documents\Visual Studio 2012\Projects\GSB_ClassLibrary\GSB_Tests\obj\Debug\GSB_Tests.dll
+C:\Users\Tsu\Documents\Visual Studio 2012\Projects\GSB_ClassLibrary\GSB_Tests\obj\Debug\GSB_Tests.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\gsb_classlibrary\GSB_Tests\bin\Debug\GSB_Tests.dll
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\gsb_classlibrary\GSB_Tests\bin\Debug\GSB_Tests.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\gsb_classlibrary\GSB_Tests\bin\Debug\GSB_ClassLibrary.dll
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\gsb_classlibrary\GSB_Tests\bin\Debug\GSB_ClassLibrary.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\gsb_classlibrary\GSB_Tests\obj\Debug\GSB_Tests.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\gsb_classlibrary\GSB_Tests\obj\Debug\GSB_Tests.dll
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\gsb_classlibrary\GSB_Tests\obj\Debug\GSB_Tests.pdb

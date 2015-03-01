@@ -34,5 +34,11 @@ namespace GSBHopital
         {
             this.Close();
         }
+
+        private void btnListCustomer_Click(object sender, EventArgs e)
+        {
+            Form frm = new ListCustomer();
+            frm.ShowDialog();
+        }
     }
 }

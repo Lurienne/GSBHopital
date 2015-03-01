@@ -1,0 +1,15 @@
+c:\users\tsu\documents\visual studio 2012\Projects\GSB_ClassLibrary\GSB_ClassLibrary\bin\Debug\GSB_ClassLibrary.dll
+c:\users\tsu\documents\visual studio 2012\Projects\GSB_ClassLibrary\GSB_ClassLibrary\bin\Debug\GSB_ClassLibrary.pdb
+c:\users\tsu\documents\visual studio 2012\Projects\GSB_ClassLibrary\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.csprojResolveAssemblyReference.cache
+c:\users\tsu\documents\visual studio 2012\Projects\GSB_ClassLibrary\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.dll
+c:\users\tsu\documents\visual studio 2012\Projects\GSB_ClassLibrary\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\GSB_ClassLibrary\GSB_ClassLibrary\bin\Debug\GSB_ClassLibrary.dll
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\GSB_ClassLibrary\GSB_ClassLibrary\bin\Debug\GSB_ClassLibrary.pdb
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\GSB_ClassLibrary\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\GSB_ClassLibrary\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.dll
+C:\Users\Utilisateur3\Documents\Visual Studio 2013\Projects\GSB_ClassLibrary\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.pdb
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_ClassLibrary\bin\Debug\GSB_ClassLibrary.dll
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_ClassLibrary\bin\Debug\GSB_ClassLibrary.pdb
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.dll
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\GSB_ClassLibrary\obj\Debug\GSB_ClassLibrary.pdb

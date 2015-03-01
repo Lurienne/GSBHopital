@@ -32,6 +32,7 @@
             this.btnGoToAdd = new System.Windows.Forms.Button();
             this.btnGoToFillOrCancel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnListCustomer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -40,9 +41,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 13);
+            this.label1.Size = new System.Drawing.Size(142, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "What do you want to do?";
+            this.label1.Text = "Que voulez-vous faire ?";
             // 
             // btnGoToAdd
             // 
@@ -50,7 +51,7 @@
             this.btnGoToAdd.Name = "btnGoToAdd";
             this.btnGoToAdd.Size = new System.Drawing.Size(259, 47);
             this.btnGoToAdd.TabIndex = 1;
-            this.btnGoToAdd.Text = "Add an account";
+            this.btnGoToAdd.Text = "Ajouter un compte";
             this.btnGoToAdd.UseVisualStyleBackColor = true;
             this.btnGoToAdd.Click += new System.EventHandler(this.btnGoToAdd_Click);
             // 
@@ -60,30 +61,41 @@
             this.btnGoToFillOrCancel.Name = "btnGoToFillOrCancel";
             this.btnGoToFillOrCancel.Size = new System.Drawing.Size(259, 47);
             this.btnGoToFillOrCancel.TabIndex = 2;
-            this.btnGoToFillOrCancel.Text = "Fill or cancel an order";
+            this.btnGoToFillOrCancel.Text = "Valider ou annuler une commande";
             this.btnGoToFillOrCancel.UseVisualStyleBackColor = true;
             this.btnGoToFillOrCancel.Click += new System.EventHandler(this.btnGoToFillOrCancel_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(13, 160);
+            this.btnExit.Location = new System.Drawing.Point(12, 213);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(259, 47);
             this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Quitter";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // Navigation
+            // btnListCustomer
+            // 
+            this.btnListCustomer.Location = new System.Drawing.Point(13, 160);
+            this.btnListCustomer.Name = "btnListCustomer";
+            this.btnListCustomer.Size = new System.Drawing.Size(259, 47);
+            this.btnListCustomer.TabIndex = 4;
+            this.btnListCustomer.Text = "Liste des clients";
+            this.btnListCustomer.UseVisualStyleBackColor = true;
+            this.btnListCustomer.Click += new System.EventHandler(this.btnListCustomer_Click);
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 221);
+            this.ClientSize = new System.Drawing.Size(285, 282);
+            this.Controls.Add(this.btnListCustomer);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnGoToFillOrCancel);
             this.Controls.Add(this.btnGoToAdd);
             this.Controls.Add(this.label1);
-            this.Name = "Navigation";
+            this.Name = "Menu";
             this.Text = "Welcome";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,6 +108,7 @@
         private System.Windows.Forms.Button btnGoToAdd;
         private System.Windows.Forms.Button btnGoToFillOrCancel;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnListCustomer;
     }
 }
 

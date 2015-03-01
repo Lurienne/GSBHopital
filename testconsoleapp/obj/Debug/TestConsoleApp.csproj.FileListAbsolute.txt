@@ -1,0 +1,8 @@
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\bin\Debug\TestConsoleApp.exe.config
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\bin\Debug\TestConsoleApp.exe
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\bin\Debug\TestConsoleApp.pdb
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\bin\Debug\BibliothequeGSB.dll
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\bin\Debug\BibliothequeGSB.pdb
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\obj\Debug\TestConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\obj\Debug\TestConsoleApp.exe
+C:\Users\Utilisateur3\Documents\GitHub\GSBHopital\TestConsoleApp\obj\Debug\TestConsoleApp.pdb

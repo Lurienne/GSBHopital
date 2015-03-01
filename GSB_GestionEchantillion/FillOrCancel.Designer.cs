@@ -45,15 +45,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(105, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Order ID :";
+            this.label1.Text = "ID de la commande :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtOrderId
             // 
-            this.txtOrderId.Location = new System.Drawing.Point(66, 10);
+            this.txtOrderId.Location = new System.Drawing.Point(124, 10);
             this.txtOrderId.Name = "txtOrderId";
-            this.txtOrderId.Size = new System.Drawing.Size(87, 20);
+            this.txtOrderId.Size = new System.Drawing.Size(115, 20);
             this.txtOrderId.TabIndex = 1;
             // 
             // btnFindByIrderId
@@ -62,7 +63,7 @@
             this.btnFindByIrderId.Name = "btnFindByIrderId";
             this.btnFindByIrderId.Size = new System.Drawing.Size(145, 34);
             this.btnFindByIrderId.TabIndex = 2;
-            this.btnFindByIrderId.Text = "Find Order";
+            this.btnFindByIrderId.Text = "Trouver la commande";
             this.btnFindByIrderId.UseVisualStyleBackColor = true;
             this.btnFindByIrderId.Click += new System.EventHandler(this.btnFindByIrderId_Click);
             // 
@@ -71,16 +72,17 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 13);
+            this.label2.Size = new System.Drawing.Size(256, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "If filling an order, specify filled date";
+            this.label2.Text = "Si la commande est validée, renseigner la validation :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dtpFillDate
             // 
             this.dtpFillDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFillDate.Location = new System.Drawing.Point(200, 57);
+            this.dtpFillDate.Location = new System.Drawing.Point(283, 57);
             this.dtpFillDate.Name = "dtpFillDate";
-            this.dtpFillDate.Size = new System.Drawing.Size(201, 20);
+            this.dtpFillDate.Size = new System.Drawing.Size(118, 20);
             this.dtpFillDate.TabIndex = 4;
             // 
             // dgvCustomeOrders
@@ -92,6 +94,7 @@
             this.dgvCustomeOrders.RowHeadersVisible = false;
             this.dgvCustomeOrders.Size = new System.Drawing.Size(386, 97);
             this.dgvCustomeOrders.TabIndex = 5;
+            this.dgvCustomeOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomeOrders_CellContentClick);
             // 
             // btnCancelOrder
             // 
@@ -99,7 +102,7 @@
             this.btnCancelOrder.Name = "btnCancelOrder";
             this.btnCancelOrder.Size = new System.Drawing.Size(121, 36);
             this.btnCancelOrder.TabIndex = 6;
-            this.btnCancelOrder.Text = "Cancel Order";
+            this.btnCancelOrder.Text = "Annuler la commande";
             this.btnCancelOrder.UseVisualStyleBackColor = true;
             this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
             // 
@@ -109,7 +112,7 @@
             this.btnFillOrder.Name = "btnFillOrder";
             this.btnFillOrder.Size = new System.Drawing.Size(118, 36);
             this.btnFillOrder.TabIndex = 7;
-            this.btnFillOrder.Text = "Fill Order";
+            this.btnFillOrder.Text = "Valider la commande";
             this.btnFillOrder.UseVisualStyleBackColor = true;
             this.btnFillOrder.Click += new System.EventHandler(this.btnFillOrder_Click);
             // 
@@ -119,7 +122,7 @@
             this.btnFinishUpdates.Name = "btnFinishUpdates";
             this.btnFinishUpdates.Size = new System.Drawing.Size(118, 36);
             this.btnFinishUpdates.TabIndex = 8;
-            this.btnFinishUpdates.Text = "Finish";
+            this.btnFinishUpdates.Text = "Finir";
             this.btnFinishUpdates.UseVisualStyleBackColor = true;
             this.btnFinishUpdates.Click += new System.EventHandler(this.btnFinishUpdates_Click);
             // 
@@ -138,7 +141,7 @@
             this.Controls.Add(this.txtOrderId);
             this.Controls.Add(this.label1);
             this.Name = "FillOrCancel";
-            this.Text = "Fill or cancel an order";
+            this.Text = "Valider ou annuler une commande";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomeOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

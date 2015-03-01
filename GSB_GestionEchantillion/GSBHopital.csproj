@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5AFE1B42-F426-4341-9947-59290BB10C1C}</ProjectGuid>
+    <ProjectGuid>{2C5C0875-D4E1-4EDC-8859-0C84763676F1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GSBHopital</RootNamespace>
@@ -51,6 +51,12 @@
     <Compile Include="FillOrCancel.Designer.cs">
       <DependentUpon>FillOrCancel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListCustomer.Designer.cs">
+      <DependentUpon>ListCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,9 +71,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility.cs" />
     <EmbeddedResource Include="FillOrCancel.resx">
       <DependentUpon>FillOrCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListCustomer.resx">
+      <DependentUpon>ListCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -96,7 +104,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GSB_ClassLibrary\GSB_ClassLibrary.csproj">
+      <Project>{3814001b-b5e0-4479-8fac-1e1b01881be6}</Project>
+      <Name>GSB_ClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

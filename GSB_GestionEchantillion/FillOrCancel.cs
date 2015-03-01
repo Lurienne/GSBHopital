@@ -10,13 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using GSB_ClassLibrary;
 
 namespace GSBHopital
 {
     public partial class FillOrCancel : Form
     {
         private int parsedOrderID;
-        string connstr = GSBHopital.Utility.GetConnectionString();
+        private CustomerServices CustomerService = GSB_ClassLibrary.CustomerServices.getinstance();
 
 
         public FillOrCancel()
@@ -28,11 +29,11 @@ namespace GSBHopital
         {
             if (txtOrderId.Text == String.Empty)
             {
-                MessageBox.Show("Thank you to fill the order number.");
+                MessageBox.Show("Merci de remplir le numero de la commande.");
                 return false;
             }
             else if (Regex.IsMatch(txtOrderId.Text, @"^\D*$")) {
-                MessageBox.Show("Thank you to enter only numbers.");
+                MessageBox.Show("Merci d'entrer seulement des nombres.");
                 txtOrderId.Clear();
                 return false;
             }
@@ -47,29 +48,10 @@ namespace GSBHopital
         {
             if (isOrderID())
             {
-                SqlConnection conn = new SqlConnection(connstr);
-                string sql = "select * from Orders where orderID = @orderID;";
-                SqlCommand cmdOrderId = new SqlCommand(sql, conn);
-                cmdOrderId.Parameters.Add(new SqlParameter("@orderID", SqlDbType.Int));
-                cmdOrderId.Parameters["@orderID"].Value = parsedOrderID;
+                DataTable table = CustomerService.getOrders(txtOrderId.Text);
 
-                try
-                {
-                    conn.Open();
-                    SqlDataReader rdr = cmdOrderId.ExecuteReader();
-                    DataTable table = new DataTable();
-                    table.Load(rdr);
-                    this.dgvCustomeOrders.DataSource = table;
-                    rdr.Close();
-                }
-                catch
-                {
-                    MessageBox.Show("The request could not be performed.");
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                this.dgvCustomeOrders.DataSource = table; 
+              
             }
         }
 
@@ -77,24 +59,9 @@ namespace GSBHopital
         {
             if (isOrderID())
             {
-                SqlConnection conn = new SqlConnection(connstr);
-                SqlCommand cmdCancel = new SqlCommand("uspCancelOrder", conn);
-                cmdCancel.CommandType = CommandType.StoredProcedure;
-                cmdCancel.Parameters.Add(new SqlParameter("@orderID", SqlDbType.Int));
-                cmdCancel.Parameters["@orderID"].Value = parsedOrderID;
-
-                try
+                if (!CustomerService.cancelOrder(int.Parse(txtOrderId.Text)))
                 {
-                    conn.Open();
-                    cmdCancel.ExecuteNonQuery();
-                }
-                catch
-                {
-                    MessageBox.Show("The request could not be performed.");
-                }
-                finally
-                {
-                    conn.Close();
+                    MessageBox.Show("La requete ne peut pas être effectuée.");
                 }
             }
         }
@@ -103,26 +70,9 @@ namespace GSBHopital
         {
             if (isOrderID())
             {
-                SqlConnection conn = new SqlConnection(connstr);
-                SqlCommand cmdFillOrder = new SqlCommand("uspFillOrder", conn);
-                cmdFillOrder.CommandType = CommandType.StoredProcedure;
-                cmdFillOrder.Parameters.Add(new SqlParameter("@orderID", SqlDbType.Int));
-                cmdFillOrder.Parameters["@orderID"].Value = parsedOrderID;
-                cmdFillOrder.Parameters.Add(new SqlParameter("@FilledDate", SqlDbType.DateTime));
-                cmdFillOrder.Parameters["@FilledDate"].Value = dtpFillDate.Value;
-
-                try
+                if (!CustomerService.fillOrder(int.Parse(txtOrderId.Text), dtpFillDate.Value))
                 {
-                    conn.Open();
-                    cmdFillOrder.ExecuteNonQuery();
-                }
-                catch
-                {
-                    MessageBox.Show("The request could not be performed.");
-                }
-                finally
-                {
-                    conn.Close();
+                    MessageBox.Show("La requete ne peut pas être effectuée.");
                 }
             }
         }
@@ -130,6 +80,21 @@ namespace GSBHopital
         private void btnFinishUpdates_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCustomeOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

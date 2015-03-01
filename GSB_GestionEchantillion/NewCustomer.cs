@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using GSB_ClassLibrary;
 
 namespace GSBHopital
 {
     public partial class NewCustomer : Form
     {
-        private int parseCustomerID;
-        private int orderID;
-        string connstr = GSBHopital.Utility.GetConnectionString();
+        private CustomerServices CustomerService = GSB_ClassLibrary.CustomerServices.getinstance();
 
         public NewCustomer()
         {
@@ -40,11 +39,11 @@ namespace GSBHopital
         {
             if (txtCustomerId.Text == String.Empty)
             {
-                MessageBox.Show("Thank you to create an account before placing an order.");
+                MessageBox.Show("Merci de créer un compte avant de passer une commande.");
                 return false;
             }
             else if (numOrderAMount.Value < 1) {
-                MessageBox.Show("Thank you to fill the amount of the order.");
+                MessageBox.Show("Merci de remplir le montant de la commande.");
                 return false;
             }
             else
@@ -57,30 +56,8 @@ namespace GSBHopital
         {
             if (isCustomerName())
             {
-                SqlConnection conn= new SqlConnection(connstr);
-                SqlCommand cmdNewCustomer = new SqlCommand("uspNewCustomer", conn);
-                cmdNewCustomer.CommandType = CommandType.StoredProcedure;
-
-                cmdNewCustomer.Parameters.Add(new SqlParameter("@CustomerName", SqlDbType.NVarChar, 40));
-                cmdNewCustomer.Parameters["@CustomerName"].Value = txtCustomerName.Text;
-                cmdNewCustomer.Parameters.Add(new SqlParameter("@CustomerID", SqlDbType.Int));
-                cmdNewCustomer.Parameters["@CustomerID"].Direction = ParameterDirection.Output;
-
-                try{
-                    conn.Open();
-                    cmdNewCustomer.ExecuteNonQuery();
-                    this.parseCustomerID = (int)cmdNewCustomer.Parameters["@CustomerID"].Value;
-                    this.txtCustomerId.Text = Convert.ToString(parseCustomerID);
-                } 
-
-                catch{
-                    MessageBox.Show("Customer ID was not returned. Account could not be created.");
-                }
-
-                finally{
-                    conn.Close();
-                }
-
+                CustomerService.addCustomer(txtCustomerName.Text);
+                txtCustomerId.Text = CustomerService.getCustomerID();
             }
         }
 
@@ -88,40 +65,9 @@ namespace GSBHopital
         {
             if (isPlaceOrderReady())
             {
-                SqlConnection conn = new SqlConnection(connstr);
-
-                SqlCommand cmdNewOrder = new SqlCommand("uspPlaceNewOrder", conn);
-                cmdNewOrder.CommandType = CommandType.StoredProcedure;
-
-                cmdNewOrder.Parameters.Add(new SqlParameter("@CustomerID", SqlDbType.Int));
-                cmdNewOrder.Parameters["@CustomerID"].Value = this.parseCustomerID;
-
-                cmdNewOrder.Parameters.Add(new SqlParameter("@OrderDate", SqlDbType.DateTime, 8));
-                cmdNewOrder.Parameters["@OrderDate"].Value = dtpOrderDate.Value;
-
-                cmdNewOrder.Parameters.Add(new SqlParameter("@Amount", SqlDbType.Int));
-                cmdNewOrder.Parameters["@Amount"].Value = numOrderAMount.Value;
-
-                cmdNewOrder.Parameters.Add(new SqlParameter("@Status", SqlDbType.Char, 1));
-                cmdNewOrder.Parameters["@Status"].Value = "O";
-
-                cmdNewOrder.Parameters.Add(new SqlParameter("@RC", SqlDbType.Int));
-                cmdNewOrder.Parameters["@RC"].Direction = ParameterDirection.ReturnValue;
-
-                try
+                if (!CustomerService.addOrder(dtpOrderDate.Value, numOrderAMount.Value))
                 {
-                    conn.Open();
-                    cmdNewOrder.ExecuteNonQuery();
-                    this.orderID = (int)cmdNewOrder.Parameters["@RC"].Value;
-                    MessageBox.Show("The order was sent.");
-                }
-                catch
-                {
-                    MessageBox.Show("The order could not be performed.");
-                }
-                finally
-                {
-                    conn.Close();
+                    MessageBox.Show("Cette commande ne peut pas être effectué.");
                 }
             }
         }
@@ -132,14 +78,17 @@ namespace GSBHopital
             txtCustomerName.Clear();
             dtpOrderDate.Value = DateTime.Now;
 
-            numOrderAMount.Value = 0;
-            this.parseCustomerID = 0;
-            
+            numOrderAMount.Value = 0;       
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
