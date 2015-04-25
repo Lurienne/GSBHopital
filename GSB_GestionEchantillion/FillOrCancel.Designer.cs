@@ -122,7 +122,7 @@
             this.btnFinishUpdates.Name = "btnFinishUpdates";
             this.btnFinishUpdates.Size = new System.Drawing.Size(118, 36);
             this.btnFinishUpdates.TabIndex = 8;
-            this.btnFinishUpdates.Text = "Finir";
+            this.btnFinishUpdates.Text = "Terminer";
             this.btnFinishUpdates.UseVisualStyleBackColor = true;
             this.btnFinishUpdates.Click += new System.EventHandler(this.btnFinishUpdates_Click);
             // 

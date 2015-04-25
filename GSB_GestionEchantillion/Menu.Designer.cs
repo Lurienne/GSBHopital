@@ -96,7 +96,7 @@
             this.Controls.Add(this.btnGoToAdd);
             this.Controls.Add(this.label1);
             this.Name = "Menu";
-            this.Text = "Welcome";
+            this.Text = "Bienvenue";
             this.ResumeLayout(false);
             this.PerformLayout();
 
